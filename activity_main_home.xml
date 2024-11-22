@@ -1,10 +1,491 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:visibility="visible"
     tools:context=".mainHomeActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- TextView for title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="679dp"
+        android:text="JIJAU HOSTEL"
+        android:textAlignment="center"
+        android:textColor="#383838"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <!-- GridLayout for the main content -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_margin="20dp"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:orientation="horizontal"
+        android:gravity="fill">
+
+        <!-- CardView for Notice -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cardBackgroundColor="#BDFABE"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="18sp"
+            app:cardUseCompatPadding="true">
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/notice" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notice"
+                    android:textColor="#383838"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView for Rooms -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardRooms"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cardBackgroundColor="#BDFABE"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="18sp"
+            app:cardUseCompatPadding="true">
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/rooms" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rooms"
+                    android:textColor="#383838"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView for Contact -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardContact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cardBackgroundColor="#BDFABE"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="18sp"
+            app:cardUseCompatPadding="true">
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/contact" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact"
+                    android:textColor="#383838"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView for Services -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardServices"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cardBackgroundColor="#BDFABE"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="18sp"
+            app:cardUseCompatPadding="true">
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/services" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Services"
+                    android:textColor="#383838"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView for Exit -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardExit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cardBackgroundColor="#BDFABE"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="18sp"
+            app:cardUseCompatPadding="true">
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/logout" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Logout"
+                    android:textColor="#383838"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView for Info -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cardBackgroundColor="#BDFABE"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="18sp"
+            app:cardUseCompatPadding="true">
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/info" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rooms Info"
+                    android:textColor="#383838"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+
+</RelativeLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:id="@+id/main"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="@drawable/background"-->
+<!--    tools:visibility="visible"-->
+<!--    tools:context=".mainHomeActivity">-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:layout_marginBottom="679dp"-->
+<!--        android:text="JIJAU"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColorLink="#383838"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <GridLayout-->
+<!--        android:id="@+id/gridLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:columnCount="2"-->
+<!--        android:rowCount="3"-->
+<!--        tools:layout_editor_absoluteX="20dp"-->
+<!--        tools:layout_editor_absoluteY="20dp">-->
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/cardHome"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_row="0"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="0"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_gravity="fill"-->
+<!--            app:cardBackgroundColor="#BDFABE"-->
+<!--            app:cardCornerRadius="8dp"-->
+<!--            app:cardElevation="18sp"-->
+<!--            app:cardUseCompatPadding="true">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="120dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="48dp"-->
+<!--                    android:layout_height="48dp"-->
+<!--                    android:src="@drawable/notice" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Notice"-->
+
+<!--                    android:textColor="#383838"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </LinearLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/cardRooms"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_row="0"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="1"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_gravity="fill"-->
+<!--            app:cardBackgroundColor="#BDFABE"-->
+<!--            app:cardCornerRadius="8dp"-->
+<!--            app:cardElevation="18sp"-->
+<!--            app:cardUseCompatPadding="true">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="120dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="48dp"-->
+<!--                    android:layout_height="48dp"-->
+<!--                    android:src="@drawable/rooms" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Rooms"-->
+
+<!--                    android:textColor="#383838"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </LinearLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/cardContact"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_row="1"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="0"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_gravity="fill"-->
+<!--            app:cardBackgroundColor="#BDFABE"-->
+<!--            app:cardCornerRadius="8dp"-->
+<!--            app:cardElevation="18sp"-->
+<!--            app:cardUseCompatPadding="true">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="120dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="48dp"-->
+<!--                    android:layout_height="48dp"-->
+<!--                    android:src="@drawable/contact" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Contact"-->
+
+<!--                    android:textColor="#383838"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </LinearLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/cardServices"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_row="1"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="1"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_gravity="fill"-->
+<!--            app:cardBackgroundColor="#BDFABE"-->
+<!--            app:cardCornerRadius="8dp"-->
+<!--            app:cardElevation="18sp"-->
+<!--            app:cardUseCompatPadding="true">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="120dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="48dp"-->
+<!--                    android:layout_height="48dp"-->
+<!--                    android:src="@drawable/services" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Services"-->
+
+<!--                    android:textColor="#383838"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </LinearLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/cardExit"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_row="2"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="1"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_gravity="fill"-->
+<!--            app:cardBackgroundColor="#BDFABE"-->
+<!--            app:cardCornerRadius="8dp"-->
+<!--            app:cardElevation="18sp"-->
+<!--            app:cardUseCompatPadding="true">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="120dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="48dp"-->
+<!--                    android:layout_height="48dp"-->
+<!--                    android:src="@drawable/logout" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Logout"-->
+
+<!--                    android:textColor="#383838"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </LinearLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/cardInfo"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_row="2"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="0"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_gravity="fill"-->
+<!--            app:cardBackgroundColor="#BDFABE"-->
+<!--            app:cardCornerRadius="8dp"-->
+<!--            app:cardElevation="18sp"-->
+<!--            app:cardUseCompatPadding="true">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="120dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="48dp"-->
+<!--                    android:layout_height="48dp"-->
+<!--                    android:src="@drawable/info" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Rooms Info"-->
+
+<!--                    android:textColor="#383838"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </LinearLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--    </GridLayout>-->
+
+
+<!--</RelativeLayout>-->
